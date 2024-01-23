@@ -3,11 +3,11 @@
 function calculateTotalPrice(cart) {
     // เริ่มเขียนโค้ดตรงนี้
   
-    let totalPrice = 0
+    let total = 0
     for (let i = 0 ; i < cart.length ; i++) {
-      totalPrice = totalPrice + cart[i].price * cart[i].quantity
+      total = total + cart[i].price * cart[i].quantity
     }
-    return totalPrice;
+    return total;
   }
   
   // ตัวอย่างการใช้งาน
