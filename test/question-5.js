@@ -3,12 +3,11 @@
 function calculateTotalPrice(cart) {
     // เริ่มเขียนโค้ดตรงนี้
   
-    const totalPrice = cart
-    .reduce((acc,curr) => {
-        return curr.price + acc;
-      }, 0);
-    
-      return totalPrice; 
+    let totalPrice = 0
+    for (let i = 0 ; i < cart.length ; i++) {
+      totalPrice = totalPrice + cart[i].price * cart[i].quantity
+    }
+    return totalPrice;
   }
   
   // ตัวอย่างการใช้งาน
@@ -20,4 +19,6 @@ function calculateTotalPrice(cart) {
   ];
   
   console.log(calculateTotalPrice(cart)); // ผลลัพธ์จากการ Execute ตัว Function จะต้องได้: 50
+  
+  
   
